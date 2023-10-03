@@ -19,14 +19,7 @@ for (i = 0; i < nums.length; i++) {
     index++;
   }
   if (numArr[0] === 1 && numArr[1] === number && numArr.length === 2) {
-    // primeArr.push(1);
-    // primeArr.push(i);
     primeNum += 1;
-    // console.log("hi");
     console.log(primeNum);
   }
-  // console.log(numArr);
-  // console.log(primeArr);
-  // primeNum = primeArr.reduce((a, b) => a + b);
-  // console.log(primeNum);
 }

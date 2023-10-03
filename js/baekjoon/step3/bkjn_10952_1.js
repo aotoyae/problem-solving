@@ -14,8 +14,3 @@ for (i = 0; i <= input.length; i++) {
     console.log(answer);
   }
 }
-
-// for (i = 0; i < input.length-1; i++) {
-//   let num = input[i].split(" ").map((item) => Number(item));
-//   console.log(num[0] + num[1]);
-// }

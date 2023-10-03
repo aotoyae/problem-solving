@@ -4,11 +4,6 @@ const input = require("fs")
   .trim()
   .split("\n");
 
-// const [n, s, v] = input;
-
-// const result = s.split(" ").filter((val) => val === v).length;
-// console.log(result);
-
 const n = input[0];
 const s = input[1].split(" ");
 const v = input[2];
