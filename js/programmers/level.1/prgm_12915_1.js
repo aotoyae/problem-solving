@@ -11,7 +11,5 @@ function solution(strings, n) {
     result[j] = result[j].slice(1);
   }
 
-  console.log(result);
+  return result;
 }
-
-solution(["sun", "bed", "car"], 1);
