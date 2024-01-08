@@ -1,6 +1,8 @@
 function solution(x) {
-  let [a, b] = String(x).split("");
-  let numA = +a;
-  let numB = +b;
-  return x % (numA + numB) === 0 ? true : false;
+  let sum = 0;
+  let arr = String(x).split("");
+  for (let i = 0; i < arr.length; i++) {
+    sum += Number(arr[i]);
+  }
+  return x % sum === 0 ? true : false;
 }
