@@ -5,6 +5,5 @@ function solution(n, m) {
     if (lcm % n === 0 && lcm % m === 0) break;
     lcm++;
   }
-
   return lcm;
 }
