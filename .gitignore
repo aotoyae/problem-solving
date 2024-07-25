@@ -1,7 +1,8 @@
 js/solving_bkjn/
 js/solving_prgm/
-js_review/solving_prgm/
 js/template/
+js_review/solving_prgm/
+js_review/template/
 test.html
 .idea/
 python/solving_bkjn/
