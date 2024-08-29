@@ -1,20 +1,25 @@
-import re
-
 def solution(dartResult):
-    answer = 0
+    num = ''
+    score = []
 
-    split_dartResult = re.split(r'(S|D|T|\*|#)', dartResult)
-    split_dartResult = [item for item in split_dartResult if item != ""]
-
-    for i in range(len(dartResult)):
-        if dartResult[i] == "D":
-            answer += dartResult[i - 1] ** 2
-        elif dartResult[i] == "T":
-            answer += dartResult[i - 1] ** 3
-        elif dartResult[i] == "*":
-            if i >= 4:
-                answer += dartResult[i - 1] * 2 + dartResult[i - 2]
-        
-            
-
-    return split_dartResult
+    for i in dartResult:
+        if i.isdigit():
+            num += i
+        elif i == "S":
+            score.append(int(num))
+            num = ""
+        elif i == "D":
+            score.append(int(num) ** 2)
+            num = ""
+        elif i == "T":
+            score.append(int(num) ** 3)
+            num = ""
+        elif i == "*":
+            if len(score) > 1:
+                score[-2:] = [n * 2 for n in score[-2:]]
+            else:
+                score[0] *= 2 
+        elif i == "#":
+            score[-1] *= -1
+    
+    return sum(score)
