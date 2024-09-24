@@ -10,10 +10,10 @@ def solution(friends, gifts):
         gives[send] += 1
         gets[target] += 1
 
-    for k, _ in gift_dic.items():
+    for k in gift_dic.keys():
         count = 0
 
-        for kk, _ in gift_dic[k].items():
+        for kk in gift_dic[k].keys():
             if gift_dic[k][kk] > gift_dic[kk][k]:
                 count += 1
             elif gift_dic[k][kk] == gift_dic[kk][k]:
