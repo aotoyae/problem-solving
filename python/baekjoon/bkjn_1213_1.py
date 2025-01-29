@@ -4,27 +4,22 @@ sys.stdin = open('input.txt', 'r')
 
 NAME = input().strip()
 dic = {}
-keys = sorted(list(set(NAME)))
 present = ''
 odd = []
 
-for key in keys:
-    cnt = NAME.count(key)
-    dic[key] = cnt
-    if cnt % 2:
-        odd.append(key)
+for i in NAME:
+    dic[i] = dic.get(i, 0) + 1
+
+for k, v in dic.items():
+    if v % 2:
+        odd.append(k)
 
 if len(odd) > 1:
     print("I'm Sorry Hansoo")
 else:
-    for k, v in dic.items():
+    for k, v in sorted(dic.items()):
         present += k * (v // 2)
 
-    if odd:
-        present += odd[0] + present[::-1]
-    else:
-        present += present[::-1]
+    present += (odd[0] if odd else '') + present[::-1]
 
     print(present)
-
-
